@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function <% blockNamePHPLower %>_cgb_block_assets() { // phpcs:ignore
+function <% blockNamePHPLower %>_mashbo_assets() { // phpcs:ignore
 	// Styles.
 	wp_enqueue_style(
 		'<% blockNamePHPLower %>-cgb-style-css', // Handle.
@@ -30,7 +30,7 @@ function <% blockNamePHPLower %>_cgb_block_assets() { // phpcs:ignore
 }
 
 // Hook: Frontend assets.
-add_action( 'enqueue_block_assets', '<% blockNamePHPLower %>_cgb_block_assets' );
+add_action( 'enqueue_block_assets', '<% blockNamePHPLower %>_mashbo_assets' );
 
 /**
  * Enqueue Gutenberg block assets for backend editor.
@@ -44,7 +44,7 @@ add_action( 'enqueue_block_assets', '<% blockNamePHPLower %>_cgb_block_assets' )
 function <% blockNamePHPLower %>_cgb_editor_assets() { // phpcs:ignore
 	// Scripts.
 	wp_enqueue_script(
-		'<% blockNamePHPLower %>-cgb-block-js', // Handle.
+		'<% blockNamePHPLower %>-mashbo-js', // Handle.
 		plugins_url( '/dist/blocks.build.js', dirname( __FILE__ ) ), // Block.build.js: We register the block here. Built with Webpack.
 		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ), // Dependencies, defined above.
 		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.build.js' ), // Version: File modification time.
@@ -53,7 +53,7 @@ function <% blockNamePHPLower %>_cgb_editor_assets() { // phpcs:ignore
 
 	// Styles.
 	wp_enqueue_style(
-		'<% blockNamePHPLower %>-cgb-block-editor-css', // Handle.
+		'<% blockNamePHPLower %>-mashbo-editor-css', // Handle.
 		plugins_url( 'dist/blocks.editor.build.css', dirname( __FILE__ ) ), // Block editor CSS.
 		array( 'wp-edit-blocks' ) // Dependency to include the CSS after it.
 		// filemtime( plugin_dir_path( __DIR__ ) . 'dist/blocks.editor.build.css' ) // Version: File modification time.

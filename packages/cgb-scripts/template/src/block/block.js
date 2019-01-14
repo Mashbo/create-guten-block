@@ -25,15 +25,14 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'cgb/block-<% blockName %>', {
+registerBlockType( 'mashbo/<% blockName %>', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( '<% blockName %> - CGB Block' ), // Block title.
+	title: __( '<% blockName %>' ), // Block title.
 	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
-		__( '<% blockName %> — CGB Block' ),
-		__( 'CGB Example' ),
-		__( 'create-guten-block' ),
+		__( '<% blockName %>' ),
+		__( 'Mashbo' )
 	],
 
 	/**
@@ -45,20 +44,12 @@ registerBlockType( 'cgb/block-<% blockName %>', {
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	edit: function( props ) {
-		// Creates a <p class='wp-block-cgb-block-<% blockName %>'></p>.
+		// Creates a <p class='wp-block-mashbo-<% blockName %>'></p>.
 		return (
 			<div className={ props.className }>
 				<p>— Hello from the backend.</p>
 				<p>
-					CGB BLOCK: <code><% blockName %></code> is a new Gutenberg block
-				</p>
-				<p>
-					It was created via{ ' ' }
-					<code>
-						<a href="https://github.com/ahmadawais/create-guten-block">
-							create-guten-block
-						</a>
-					</code>.
+					Mashbo: <code><% blockName %></code> is a new Gutenberg block
 				</p>
 			</div>
 		);
@@ -77,15 +68,7 @@ registerBlockType( 'cgb/block-<% blockName %>', {
 			<div>
 				<p>— Hello from the frontend.</p>
 				<p>
-					CGB BLOCK: <code><% blockName %></code> is a new Gutenberg block.
-				</p>
-				<p>
-					It was created via{ ' ' }
-					<code>
-						<a href="https://github.com/ahmadawais/create-guten-block">
-							create-guten-block
-						</a>
-					</code>.
+					MASHBO: <code><% blockName %></code> is a new Gutenberg block.
 				</p>
 			</div>
 		);
