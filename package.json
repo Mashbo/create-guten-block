@@ -1,6 +1,7 @@
 {
 	"private": true,
 	"version": "1.0.0",
+	"name": "gutten-block-create",
 	"workspaces": [
 		"packages/*"
 	],
