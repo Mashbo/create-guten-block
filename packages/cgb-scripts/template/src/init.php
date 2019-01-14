@@ -36,12 +36,12 @@ add_action( 'enqueue_block_assets', '<% blockNamePHPLower %>_mashbo_assets' );
  * Enqueue Gutenberg block assets for backend editor.
  *
  * @uses {wp-blocks} for block type registration & related functions.
- * @uses {wp-element} for WP Element abstraction — structure of blocks.
+ * @uses {wp-element} for WP Element abstraction — såtructure of blocks.
  * @uses {wp-i18n} to internationalize the block's text.
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function <% blockNamePHPLower %>_cgb_editor_assets() { // phpcs:ignore
+function <% blockNamePHPLower %>_mashbo_editor_assets() { // phpcs:ignore
 	// Scripts.
 	wp_enqueue_script(
 		'<% blockNamePHPLower %>-mashbo-js', // Handle.
@@ -61,4 +61,4 @@ function <% blockNamePHPLower %>_cgb_editor_assets() { // phpcs:ignore
 }
 
 // Hook: Editor assets.
-add_action( 'enqueue_block_editor_assets', '<% blockNamePHPLower %>_cgb_editor_assets' );
+add_action( 'enqueue_block_editor_assets', '<% blockNamePHPLower %>_mashbo_editor_assets' );
