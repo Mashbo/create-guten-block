@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"version": "1.0.0",
-	"name": "gutten-block-create",
+	"name": "@mashbo/create-gutten-block",
 	"workspaces": [
 		"packages/*"
 	],
