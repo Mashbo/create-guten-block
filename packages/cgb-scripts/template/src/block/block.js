@@ -40,7 +40,7 @@ registerBlockType( 'mashbo/<% blockName %>', {
 	 * This represents what the editor will render when the block is used.
 	 *
 	 * The "edit" property must be a valid function.
-	 *
+	 *https://github.com/Mashbo/create-guten-block
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
 	edit: function( props ) {
