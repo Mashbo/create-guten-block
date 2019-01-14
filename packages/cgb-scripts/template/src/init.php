@@ -36,7 +36,7 @@ add_action( 'enqueue_block_assets', '<% blockNamePHPLower %>_mashbo_assets' );
  * Enqueue Gutenberg block assets for backend editor.
  *
  * @uses {wp-blocks} for block type registration & related functions.
- * @uses {wp-element} for WP Element abstraction — såtructure of blocks.
+ * @uses {wp-element} for WP Element abstraction — structure of blocks.
  * @uses {wp-i18n} to internationalize the block's text.
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
